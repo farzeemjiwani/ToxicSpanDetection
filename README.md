@@ -1,3 +1,7 @@
+# Motivation
+
+The primary objective of this repo is to understand the Toxic Span Detection problem and has used the implementation given in the paper: https://arxiv.org/pdf/2110.03730v1.pdf. You can find the source code here: https://github.com/erikdyan/toxic_span_detection.
+
 # Toxic Span Detection
 
 [Toxic Span Detection](https://sites.google.com/view/toxicspans) is a task at [SemEval 2021](https://semeval.github.io/SemEval2021/). It concerns the evaluation of systems that detect the spans that make a text toxic, when detecting such spans is possible.
@@ -27,13 +31,17 @@ This project investigates several approaches for extracting toxic spans from tex
 
 ## Running the Project
 
-`run_ner.py` contains all code for this project. You can fine-tune, evaluate, and test a classification task as follows:
+`pip install -r requirements.txt` will install all the necessary libraries needed to run the project.
+
+`run_ner.py` inside the `src` folder contains all code for this project. You can fine-tune, evaluate, and test a classification task as follows:
 
 ```
 python run_ner.py data/tsd_train.csv --do_train --model_output_dir models/sample_model/
 python run_ner.py data/tsd_trial.csv --do_eval --model_name_or_path models/sample_model/ --result_output_dir results/sample_model/
 python run_ner.py data/tsd_test.csv --do_test --model_name_or_path models/sample_model/ --result_output_dir results/sample_model/
 ```
+
+`NLP_Final_Project_Farzeem_Agha_Group2.ipynb` contains the above commands in a Google Colab environment along with detailed explanation of the implementation provided in the original paper, as well as a comparison analysis with another approach mentioned in this paper: https://arxiv.org/pdf/2103.09645v2.pdf.
 
 ### Additional Flags
 
